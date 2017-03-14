@@ -1,0 +1,17 @@
+Package: climatedata
+Title: Retrieve Climate Related Datasets
+Version: 0.0.1
+Authors@R: person("Michael", "Bertolacci", email = "m.bertolacci@gmail.com", role = c("aut", "cre"))
+Description: What the package does (one paragraph).
+Depends:
+    R (>= 3.2.2)
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports:
+    reshape2
+RoxygenNote: 5.0.1
+Suggests:
+    raster,
+    rvest,
+    xml2
