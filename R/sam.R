@@ -28,10 +28,10 @@ load_sam_hadslp2 <- function(reference_period = c('1961-01-01', '1991-01-01'), s
 
     # Split zones based on latitude
     hadslp2_zones <- hadslp2[[1]]
-    values(hadslp2_zones) <- coordinates(hadslp2)[, 2]
+    raster::values(hadslp2_zones) <- sp::coordinates(hadslp2)[, 2]
 
     # Calculate zonal means
-    hadslp2_zonal_mslp <- zonal(hadslp2, hadslp2_zones, mean)
+    hadslp2_zonal_mslp <- raster::zonal(hadslp2, hadslp2_zones, mean)
     zones <- hadslp2_zonal_mslp[, 1]
     hadslp2_zonal_mslp <- hadslp2_zonal_mslp[, 2 : ncol(hadslp2_zonal_mslp)]
 
