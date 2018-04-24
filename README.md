@@ -28,7 +28,7 @@ This will also create a file in the working directory, 'iod.rds', caching this d
 
 To download this index, call
 
-    iod_data <- climatedata::load_soi()
+    soi_data <- climatedata::load_soi()
 
 This will also create a file in the working directory, 'soi.rds', caching this data, so subsequent calls do not go to the server (see Overview for more details).
 
