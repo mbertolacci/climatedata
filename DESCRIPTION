@@ -9,9 +9,10 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports:
-    reshape2
-RoxygenNote: 5.0.1
-Suggests:
+    reshape2,
     raster,
     rvest,
+    sp,
+    testthat,
     xml2
+RoxygenNote: 5.0.1
