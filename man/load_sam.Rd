@@ -4,9 +4,8 @@
 \alias{load_sam}
 \title{Returns Southern Annular Mode data. Caches it into filename unless filename is NULL.}
 \usage{
-load_sam(filename = "sam.rds", data_source = "hadslp2", ...)
+load_sam(filename = "sam.rds", data_source = "marshall", ...)
 }
 \description{
 Returns Southern Annular Mode data. Caches it into filename unless filename is NULL.
 }
-

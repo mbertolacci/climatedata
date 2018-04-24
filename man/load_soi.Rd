@@ -9,4 +9,3 @@ load_soi(filename = "soi.rds", data_source = "bom", ...)
 \description{
 Returns Southern Ocean Oscillation data. Caches it into filename unless filename is NULL.
 }
-

@@ -9,4 +9,3 @@ load_iod(filename = "iod.rds", data_source = "jamstec", ...)
 \description{
 Returns Indian Ocean Dipole data. Caches it into filename unless filename is NULL.
 }
-
