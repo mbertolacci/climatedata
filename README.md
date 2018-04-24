@@ -43,3 +43,14 @@ for the Marshall index, and
     sam_data <- climatedata::load_sam(data_source = 'hadslp2')
 
 for the HadSLP2 source, where the latter is calculated as per Gong and Wang (1999).
+
+### Rows matching dates
+
+Given a data set, say `soi_data` above, you can retrieve rows matching dates by running the `get_for_dates` function. An example usage is
+
+    dates <- as.POSIXct(c('2018-01-01', '2010-05-20'))
+    soi_for_dates <- climatedata::get_for_dates(soi_data, dates)
+
+If you want to get the data for the month prior to the dates, you can run
+
+    soi_for_dates <- climatedata::get_for_dates(soi_data, dates, lag = 1)
