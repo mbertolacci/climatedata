@@ -38,7 +38,7 @@ load_sam_hadslp2 <- function(reference_period = c('1961-01-01', '1991-01-01'), s
     # Calculate SAM
     normalise <- function(x, dates) {
         reference_x <- x[dates >= reference_period[1] & dates < reference_period[2]]
-        return((x - mean(reference_x)) / sd(reference_x))
+        return((x - mean(reference_x)) / stats::sd(reference_x))
     }
     sam_dates <- strptime(colnames(hadslp2_zonal_mslp), 'X%Y.%m.%d', tz = 'UTC')
     sam_values <- (
