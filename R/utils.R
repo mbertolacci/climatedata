@@ -11,8 +11,8 @@
 #'
 #' Returns rows matching the provided dates.
 #'
-#' @param data Data, typically loaded using load_soi/iod/sam, for which the
-#' first column is an integer year and the second column is an integer month
+#' @param data Data frame, typically loaded using load_soi/iod/sam, which has
+#' integer year and month columns.
 #' @param dates Dates to grab corresponding rows for. Can be any type
 #' supporting the format command (e.g., Date, POSIXlt, POSIXct)
 #' @param lags Number of months to lag matching. For instance, lag = 1

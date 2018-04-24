@@ -7,8 +7,8 @@
 get_for_dates(data, dates, lag = 0)
 }
 \arguments{
-\item{data}{Data, typically loaded using load_soi/iod/sam, for which the
-first column is an integer year and the second column is an integer month}
+\item{data}{Data frame, typically loaded using load_soi/iod/sam, which has
+integer year and month columns.}
 
 \item{dates}{Dates to grab corresponding rows for. Can be any type
 supporting the format command (e.g., Date, POSIXlt, POSIXct)}
