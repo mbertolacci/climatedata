@@ -10,19 +10,19 @@ This package is not in CRAN right now. Just install using devtools and github
 
 ## Usage
 
-This package helps you download a few climate indices for use in data analysis. At present, indices for the [Indian Ocean Dipole](http://www.jamstec.go.jp/frsgc/research/d1/iod/iod/dipole_mode_index.html), the [Southern Oscillation Index](http://www.bom.gov.au/climate/current/soi2.shtml), and the [Southern Annular Mode](http://www.bom.gov.au/climate/enso/history/ln-2010-12/SAM-what.shtml) are supported.
+This package helps you download a few climate indices for use in data analysis. At present, indices for the [Indian Ocean Dipole](https://psl.noaa.gov/gcos_wgsp/Timeseries/DMI/), the [Southern Oscillation Index](http://www.bom.gov.au/climate/current/soi2.shtml), and the [Southern Annular Mode](http://www.bom.gov.au/climate/enso/history/ln-2010-12/SAM-what.shtml) are supported.
 
 ### Overview
 
 There are three functions for download data, `load_iod`, `load_soi` and `load_sam`. Common to each of these is an argument named `filename` (defaults described for each call), wherein the downloaded data will be cached so that subsequent calls to this function do not require internet connectivity. This behaviour can be disabled by setting `filename = NULL`.
 
-### Indian Ocean Dipole (via the Dipole Mode Index provided by [JAMSTEC](http://www.jamstec.go.jp/frsgc/research/d1/iod/iod/dipole_mode_index.html))
+### Indian Ocean Dipole (via the Dipole Mode Index provided by [NOAA](https://psl.noaa.gov/gcos_wgsp/Timeseries/DMI/))
 
 To download this index, call
 
     iod_data <- climatedata::load_iod()
 
-This will also create a file in the working directory, 'iod.rds', caching this data, so subsequent calls do not go to the server (see Overview for more details).
+This will also create a file in the working directory, 'iod.rds', caching this data, so subsequent calls do not go to the server (see Overview for more details). Data for this formerly came from [JAMSTEC](http://www.jamstec.go.jp/frsgc/research/d1/iod/iod/dipole_mode_index.html), but their website is currently having difficulties. If that is fixed, the JAMSTEC data will be accessible using `climatedata::load_iod(source = 'jamstec')`. Note that the JAMSTEC and NOAA values may differ due to differing methodologies; please read the documentation for the respective sources and pick the best for your use.
 
 ### Southern Oscillation Index (via the [Australian Bureau of Meteorology](http://www.bom.gov.au/climate/current/soi2.shtml))
 
